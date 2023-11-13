@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+<div class="flex justify-center h-screen items-center">
+    <div class="border border-black font-mono p-8 w-[500px]">
+        <form onsubmit="handleSubmit(event)" class="flex gap-6 flex-wrap justify-between items-center">
+            <div class="">
+                <input oninput="handleTyping()" id="fname" class="border outline-none border-black p-2 rounded-md" placeholder="First Name" type="text">
+                <p class="h-4 text-red-600 text-sm" id="fNameError"></p>
+            </div>
+            <div class="">
+                <input id="lname" oninput="handleTyping()" class="border outline-none border-black p-2 rounded-md" placeholder="Last Name" type="text">
+                <p class="h-4 text-red-600 text-sm" id="lNameError"></p>
+            </div>
+            <div class="">
+                <input id="phone" oninput="handleTyping()" class="border outline-none border-black p-2 rounded-md" placeholder="Phone no" type="text">
+                <p class="h-4 text-red-600 text-sm" id="phoneError"></p>
+            </div>
+            <div class="">
+                <input id="email" oninput="handleTyping()" class="border outline-none border-black p-2 rounded-md" placeholder="Email" type="text">
+                <p class="h-4 text-red-600 text-sm" id="emailError"></p>
+            </div>
+
+            <span class="w-full relative">
+                <input id="pass" class="border outline-none border-black p-2 w-full rounded-md" placeholder="Password" type="text">
+                <span onclick="generatePassword()" title="Generate Password" class="cursor-pointer absolute top-[50%] right-4 transform translate-y-[-50%] select-none active:scale-90 border border-black rounded-md w-6 h-6 text-center">?</span>
+            </span>
+            <input id="Cpass" class="border outline-none border-black p-2 w-full rounded-md" placeholder="Confirm Password" type="text">
+            <p class="h-4 -mt-4 text-red-600 text-sm" id="CpassError"></p>
+            <input onclick="" class="border -mt-2 border-black p-2 w-full cursor-pointer  rounded-md" type="submit">
+        </form>
+    </div>
+</div>   
+     
+</body>
+</html>
